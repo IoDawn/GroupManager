@@ -12,8 +12,8 @@ from base64 import b64decode
 from pySmartDL import SmartDL
 from telethon.tl.types import DocumentAttributeVideo, DocumentAttributeAudio
 from telethon import events
-from LaylaRobot.laylabot import layla
-from LaylaRobot.utils import progress
+from haruka.haruka import haruka
+from haruka.utils import progress
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.messages import ImportChatInviteRequest as Get
 from validators.url import url
@@ -38,7 +38,7 @@ except:
 	from youtubesearchpython import SearchVideos 
 	pass
 
-@layla(pattern="^/song (.*)")
+@haruka(pattern="^/song (.*)")
 async def download_video(v_url):
 
     lazy = v_url ; sender = await lazy.get_sender() ; me = await lazy.client.get_me()
@@ -158,7 +158,7 @@ async def download_video(v_url):
         os.remove(f"{rip_data['id']}.mp4")
 
 
-@layla(pattern="^/video (.*)")
+@haruka(pattern="^/video (.*)")
 async def download_video(v_url):  
     lazy = v_url ; sender = await lazy.get_sender() ; me = await lazy.client.get_me()
     if not sender.id == me.id:
