@@ -22,10 +22,10 @@ from pytz import country_names as cname
 from telegram import ParseMode
 from telegram.error import BadRequest
 
-from ubotindo import API_WEATHER as APPID
-from ubotindo import dispatcher
-from ubotindo.modules.disable import DisableAbleCommandHandler
-from ubotindo.modules.helper_funcs.alternate import typing_action
+from haruka import API_WEATHER as APPID
+from haruka import dispatcher
+from haruka.modules.disable import DisableAbleCommandHandler
+from haruka.modules.helper_funcs.alternate import typing_action
 
 
 @typing_action
