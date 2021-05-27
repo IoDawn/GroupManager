@@ -12,14 +12,14 @@ from asyncio import sleep
 from telethon.tl.types import DocumentAttributeAudio
 from collections import deque
 from googleapiclient.discovery import build
-from LaylaRobot.laylabot import layla
-from LaylaRobot import YOUTUBE_API_KEY
+from haruka.haruka import haruka
+from haruka import YOUTUBE_API_KEY
 from html import unescape
 import requests
 
 
 
-@layla(pattern="^/yt(audio|video) (.*)")
+@haruka(pattern="^/yt(audio|video) (.*)")
 async def download_video(v_url):
     """ For .ytdl command, download media from YouTube and many other sites. """
     url = v_url.pattern_match.group(2)
